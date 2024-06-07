@@ -1,6 +1,5 @@
 import React from "react";
 import styled from 'styled-components'
-
 import Wallpaper from '../../assets/images/wallpaper.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPhone,faEnvelope} from '@fortawesome/free-solid-svg-icons'
@@ -9,7 +8,6 @@ import {faPhone,faEnvelope} from '@fortawesome/free-solid-svg-icons'
 const Dashboard = () => {
     return (
     <MainContainer>
-        
         <Body>
         <HeaderContainer>
             <Header>
