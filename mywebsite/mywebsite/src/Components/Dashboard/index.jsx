@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Wallpaper from '../../assets/images/wallpaper.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPhone,faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 
 const Dashboard = () => {
@@ -18,6 +19,7 @@ const Dashboard = () => {
                 <ContactUs>Contact Us</ContactUs>
                 <Mobile><FontAwesomeIcon icon={faPhone} />+91-9876543210</Mobile>
                 <Email><FontAwesomeIcon icon={faEnvelope} />abcd@gmail.com</Email>
+                <Youtube><FontAwesomeIcon icon={faYoutube} /><a href="https://www.youtube.com/@sonusaha2836">Youtube</a></Youtube>
                 <Address>Address: Shop no-12, Buddha Colony, Boring Road, Patna.</Address>
             </Contact>
         </HeaderContainer>
@@ -104,6 +106,28 @@ const Email = styled.div`
         color: #313a40;
         transform: scale(1.1);
     }`
+
+const Youtube = styled.div`
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: transform .5s ease;
+    svg{
+        height: 1.6rem;
+    width: 1.6rem;}
+
+    a{
+        color: #fff;
+        text-decoration: none;
+    }
+
+    &:hover{
+        color: #313a40;
+        transform: scale(1.1);
+    }
+    `;
+    
 
 const Address = styled.div`
     display: flex;
