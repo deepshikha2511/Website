@@ -22,7 +22,7 @@ const Dashboard = () => {
               <FontAwesomeIcon icon={faPhone} />
               Call
             </ContactDetail>
-            <ContactDetail as="a" href="https://wa.me/9504632020">
+            <ContactDetail as="a" href="https://wa.me/+919504632020">
               <FontAwesomeIcon icon={faWhatsapp} />
               Whatsapp
             </ContactDetail>
