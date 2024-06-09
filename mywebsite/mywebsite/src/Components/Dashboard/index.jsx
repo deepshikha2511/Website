@@ -84,6 +84,10 @@ const ShopName = styled.div``;
 const Subheader = styled.div`
   color: #ebf3f9;
   font-size: 1.75rem;
+  @media (max-width: 768px) {
+    gap: 2rem;
+    font-size: 1rem;
+  }
 `;
 
 const Body = styled.div`
