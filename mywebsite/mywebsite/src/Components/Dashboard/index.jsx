@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Wallpaper from "../../assets/images/wallpaper.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faWhatsapp, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 const Dashboard = () => {
   return (
@@ -19,11 +20,20 @@ const Dashboard = () => {
             <ContactUs>Contact Us</ContactUs>
             <ContactDetail as="a" href="tel:+919504632020">
               <FontAwesomeIcon icon={faPhone} />
-              +91-9504632020
+              Call
+            </ContactDetail>
+            <ContactDetail as="a" href="https://wa.me/9504632020">
+              <FontAwesomeIcon icon={faWhatsapp} />
+              Whatsapp
             </ContactDetail>
             <ContactDetail as="a" href="mailto:nirbhaysingh7688@gmail.com">
               <FontAwesomeIcon icon={faEnvelope} />
-              Mail me
+              Email
+            </ContactDetail>
+            <ContactDetail>
+              {" "}
+              <FontAwesomeIcon icon={faYoutube} />
+              <a href="https://www.youtube.com/@sonusaha2836">Youtube</a>
             </ContactDetail>
             <Address>
               Address: Shop no-12, Buddha Colony, Boring Road, Patna.
@@ -41,6 +51,8 @@ export default Dashboard;
 const MainContainer = styled.div`
   background-color: #979e92;
   height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 `;
 
 const HeaderContainer = styled.div`
@@ -51,7 +63,7 @@ const HeaderContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10rem;
+  gap: 1rem;
   padding: 2rem;
 
   @media (max-width: 768px) {
@@ -76,18 +88,19 @@ const Subheader = styled.div`
 
 const Body = styled.div`
   display: flex;
-  justify-content: flex-end;
-  height: 50rem;
+  /* flex-direction: column; */
+  align-items: center;
+  min-height: 100vh;
   background-color: #979e92;
   color: #fff;
   object-fit: fill;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    padding: 1rem;
   }
 `;
-
 const WallpaperImage = styled.img`
   max-width: 100%;
   height: auto;
@@ -148,6 +161,15 @@ const ContactDetail = styled.a`
   transition: transform 0.5s ease;
   text-decoration: none;
   color: inherit;
+  svg {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
   &:hover {
     color: #313a40;
     transform: scale(1.1);
@@ -161,6 +183,19 @@ const ContactDetail = styled.a`
     font-size: 1rem;
   }
 `;
+
+// const Youtube = styled.div`
+//     font-size: 1.5rem;
+//     display: flex;
+//     align-items: center;
+//     gap: 1rem;
+//     transition: transform .5s ease;
+
+//     &:hover{
+//         color: #313a40;
+//         transform: scale(1.1);
+//     }
+//     `;
 
 const Address = styled.div`
   display: flex;
